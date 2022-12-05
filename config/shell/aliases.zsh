@@ -40,12 +40,3 @@ alias -s java=$EDITOR
 
 # Compressed
 alias -s gz='tar xzvf'
-
-## Pipes
-alias -g C='| cat'
-alias -g H='| head'
-alias -g L='| wc -l'
-alias -g P='| $PAGER'
-alias -g S='| sort -n'
-alias -g T='| tail'
-alias -g U='| uniq'

@@ -2,6 +2,10 @@
 # CLI Stylings
 #
 
+# Remove Trailing space
+# Reference: https://github.com/romkatv/powerlevel10k/issues/132#issuecomment-514592283
+ZLE_RPROMPT_INDENT=0
+
 # Set name of the theme to load
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"

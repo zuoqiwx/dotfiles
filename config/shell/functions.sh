@@ -3,9 +3,9 @@
 #
 
 # Output utilities
-out()  { print $@ ; }
-warn() { print "$fg[yel]WARNING:$reset_color" $@ >&2 }
-error()  { print "$fg[red]ERROR:$reset_color" $@ >&2 }
+out() { print $@; }
+warn() { print "$fg[yellow]WARNING:$reset_color" $@ >&2 }
+error() { print "$fg[red]ERROR:$reset_color" $@ >&2 }
 
 # Tar tools
 tarc() { tar czvf $1.tar.gz $1; }
@@ -19,17 +19,17 @@ hgrep() { history | grep --color=auto "$1" }
 mkcd() { mkdir $1 && cd $1 }
 
 # Project related
-projectls() {
+pls() {
     local i=1
     for d in $(find $PROJECT_DIR -mindepth 1 -maxdepth 1 -type d -exec basename {} \;); do
         echo $i - $d
         i=$(($i + 1))
     done
 }
-projectid() {
+pn() {
     local pdirs=($(find $PROJECT_DIR -mindepth 1 -maxdepth 1 -type d -exec basename {} \;))
     [ ${#pdirs} -ge $1 ] && [[ -d $PROJECT_DIR/${pdirs[$1]} ]] && cd $PROJECT_DIR/${pdirs[$1]}
 }
-project() {
+pd() {
     [[ -d $PROJECT_DIR/$1 ]] && cd $PROJECT_DIR/$1
 }
