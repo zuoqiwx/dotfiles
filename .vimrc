@@ -5,6 +5,7 @@ syntax on
 "Space & tabs
 set tabstop=4
 set softtabstop=4
+set shiftwidth=4
 set expandtab
 set autoindent
 
@@ -21,3 +22,6 @@ set showmatch
 set incsearch
 set hlsearch
 nnoremap <leader><space> :nohlsearch<CR>
+
+"Movement
+set mouse=a
